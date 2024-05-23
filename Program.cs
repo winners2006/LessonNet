@@ -25,20 +25,27 @@ namespace LessonNet
 			UdpClient udp = new UdpClient(12345);
 			IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Any, 0);
 			Console.WriteLine("Сервер ждет сообщение от клиента");
+
 			
 			while (true)
 			{
 				byte[] buffer = udp.Receive(ref iPEndPoint);
-				if (buffer == null) { break; }
 				var messageText = Encoding.UTF8.GetString(buffer);
 
-				Messenge? message = Messenge.DeserealiazeMessFromJson(messageText);
-				message.PrintMessege();
+				ThreadPool.QueueUserWorkItem(obj => {
+					Messenge? message = Messenge.DeserealiazeMessFromJson(messageText);
+					message.PrintMessege();
 
-				// Отправка подтверждения обратно клиенту
-				string confirmation = "Сообщение получено";
-				byte[] confirmationBytes = Encoding.UTF8.GetBytes(confirmation);
-				udp.Send(confirmationBytes, confirmationBytes.Length, iPEndPoint);
+					if (message.Text.Equals("Exit", StringComparison.OrdinalIgnoreCase))
+					{
+						Console.WriteLine("Сервер завершает работу.");
+						Environment.Exit(0);
+					}
+
+					// Отправка подтверждения клиенту
+					byte[] confirmationBytes = Encoding.UTF8.GetBytes("Сообщение получено");
+					udp.Send(confirmationBytes, confirmationBytes.Length, iPEndPoint);
+				});
 			}
 		}
 		
