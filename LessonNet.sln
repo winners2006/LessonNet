@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonNet", "LessonNet.csproj", "{C64E88B3-8DAF-40B1-BC07-682CA0F4646C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonNet", "LessonNet.csproj", "{C64E88B3-8DAF-40B1-BC07-682CA0F4646C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonNetClient", "..\LessonNetClient\LessonNetClient.csproj", "{62697816-F54B-49DA-986B-926B7BF9F8E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LessonNetClient", "..\LessonNetClient\LessonNetClient.csproj", "{ABECFC00-E441-4255-8A88-1E43DCE54899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C64E88B3-8DAF-40B1-BC07-682CA0F4646C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C64E88B3-8DAF-40B1-BC07-682CA0F4646C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C64E88B3-8DAF-40B1-BC07-682CA0F4646C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62697816-F54B-49DA-986B-926B7BF9F8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62697816-F54B-49DA-986B-926B7BF9F8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62697816-F54B-49DA-986B-926B7BF9F8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62697816-F54B-49DA-986B-926B7BF9F8E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABECFC00-E441-4255-8A88-1E43DCE54899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABECFC00-E441-4255-8A88-1E43DCE54899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABECFC00-E441-4255-8A88-1E43DCE54899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABECFC00-E441-4255-8A88-1E43DCE54899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
